@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareerNest Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Top Navbar -->
+<nav class="bg-indigo-600 text-white px-8 py-4 flex justify-between items-center">
+  <h1 class="text-2xl font-bold">CareerNest Admin</h1>
+  <button class="bg-black px-4 py-2 rounded-lg">Logout</button>
+</nav>
+
+<section class="flex">
+
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Total Opportunities</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">24</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Total Applications</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">132</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Active Listings</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">18</p>
+      </div>
+
+    </div>
+
+    <!-- Recent Opportunities Table -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">Recent Opportunities</h2>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg">
+          + Add New
+        </button>
+      </div>
+
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b">
+            <th class="py-3">Title</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-3">Frontend Developer</td>
+            <td>Full-Time</td>
+            <td>Bangalore</td>
+            <td class="text-green-600 font-medium">Active</td>
+            <td class="space-x-3">
+              <button class="text-indigo-600 hover:underline">Edit</button>
+              <button class="text-red-600 hover:underline">Delete</button>
+            </td>
+          </tr>
+
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-3">React Intern</td>
+            <td>Internship</td>
+            <td>Remote</td>
+            <td class="text-green-600 font-medium">Active</td>
+            <td class="space-x-3">
+              <button class="text-indigo-600 hover:underline">Edit</button>
+              <button class="text-red-600 hover:underline">Delete</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+</section>
+
+</body>
+</html>

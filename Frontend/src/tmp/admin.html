@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerNest - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-600 text-white px-8 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">CareerNest</h1>
+    <div class="space-x-6">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#" class="hover:underline">Explore</a>
+      <a href="#" class="bg-black px-4 py-2 rounded-lg">Admin</a>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-bold text-indigo-600 mb-8">
+      Admin Dashboard
+    </h2>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Total Opportunities</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">120</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Total Applications</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">450</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-gray-500 text-sm">Active Recruiters</h3>
+        <p class="text-3xl font-bold text-indigo-600 mt-2">18</p>
+      </div>
+
+    </div>
+
+    <!-- Manage Jobs Section -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-semibold text-gray-800">
+          Manage Opportunities
+        </h3>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-lg">
+          + Add New Opportunity
+        </button>
+      </div>
+
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b">
+            <th class="py-3">Title</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-4">Frontend Developer</td>
+            <td>Full-Time</td>
+            <td>Bangalore</td>
+            <td class="text-green-600 font-medium">Active</td>
+            <td class="space-x-3">
+              <button class="text-indigo-600 hover:underline">Edit</button>
+              <button class="text-red-600 hover:underline">Delete</button>
+            </td>
+          </tr>
+
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-4">React Intern</td>
+            <td>Internship</td>
+            <td>Remote</td>
+            <td class="text-green-600 font-medium">Active</td>
+            <td class="space-x-3">
+              <button class="text-indigo-600 hover:underline">Edit</button>
+              <button class="text-red-600 hover:underline">Delete</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
