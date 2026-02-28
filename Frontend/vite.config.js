@@ -9,7 +9,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "http://localhost:8000", // backend
+        target: "https://careernest-backend-z7pa.onrender.com/", // backend
         changeOrigin: true,
       },
     }
