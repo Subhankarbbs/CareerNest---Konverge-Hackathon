@@ -28,7 +28,3 @@ Backend API: https://your-render-url.onrender.com
 - Frontend → Vercel
 - Backend → Render
 - Database → MongoDB Atlas
-
----
-
-## 📂 Project Structure
