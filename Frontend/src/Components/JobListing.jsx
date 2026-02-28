@@ -16,15 +16,15 @@ const JobListing = ({ job }) => {
   return (
     <div className='bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-100'>
       <div className='p-6'>
-        {/* Job Type */}
-        <div className='text-sm font-medium text-indigo-600 mb-2'>
-          {job.type}
-        </div>
-
         {/* Title */}
         <h3 className='text-xl font-semibold text-gray-800 mb-3'>
           {job.title}
         </h3>
+
+        {/* Company */}
+        <p className='text-sm text-indigo-600 mb-2 font-medium'>
+          {job.company}
+        </p>
 
         {/* Description */}
         <p className='text-gray-600 text-sm mb-4'>{description}</p>
@@ -38,8 +38,16 @@ const JobListing = ({ job }) => {
         )}
 
         {/* Salary */}
-        {job.salary && (
-          <p className='text-green-600 font-semibold mb-4'>{job.salary}</p>
+        {job.salary ? (
+          <p className='text-green-600 font-semibold mb-4'>
+            {new Intl.NumberFormat('en-IN', {
+              style: 'currency',
+              currency: 'INR',
+              maximumFractionDigits: 0,
+            }).format(job.salary)}
+          </p>
+        ) : (
+          <p className='text-gray-400 text-sm mb-4'>Salary Not Disclosed</p>
         )}
 
         <hr className='mb-4' />
@@ -52,7 +60,7 @@ const JobListing = ({ job }) => {
           </div>
 
           <Link
-            to={`/job/${job.id}`}
+            to={`/job/${job._id}`}
             className='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm transition'>
             View Details
           </Link>
