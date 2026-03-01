@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(errorHandler)
 app.use(
   cors({
-    origin: "https://your-vercel-app.vercel.app",
+    origin: "https://career-nest-konverge-hackathon.vercel.app/",
   })
 );
 //Connection to DB
