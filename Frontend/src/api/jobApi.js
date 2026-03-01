@@ -1,4 +1,4 @@
-const API_URL = "/api/jobs";
+const API_URL = "https://careernest-backend.onrender.com/api/jobs";
 
 export const fetchJobs = async (pageNumber = "", keyword = "") => {
   const query = new URLSearchParams();
