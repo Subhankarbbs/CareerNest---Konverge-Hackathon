@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import colors from 'colors'
 import errorHandler from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
-// import cors from "cors";
+import cors from "cors";
 
 import jobRoutes from './routes/jobsRoutes.js'
 
@@ -15,8 +15,11 @@ const app = express();
 // // Middleware
 app.use(express.json());
 app.use(errorHandler)
-// app.use(cors());
-
+app.use(
+  cors({
+    origin: "https://your-vercel-app.vercel.app",
+  })
+);
 //Connection to DB
 connectDB();
 
@@ -28,10 +31,10 @@ app.get("/", (req, res) => {
 // Job Routes
 app.use("/api/jobs", jobRoutes);
 
-// // 404 Handler
-// app.use((req, res) => {
-//   res.status(404).json({ message: "Route not found" });
-// });
+// 404 Handler
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
 
 // // Global Error Handler
 // app.use((err, req, res, next) => {
